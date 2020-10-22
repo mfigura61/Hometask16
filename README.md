@@ -237,9 +237,9 @@ curl -XPUT "localhost:9200/_template/all" -H 'Content-Type: application/json' -d
 }'
 ```
 
-Но так как от logstash'а уже прилетели логи в elasticsearch, индекс создался из дефолтного шаблона с кол-вом реплик 1. Изменим кол-во реплик для индекса `nginx-2020.07.01`:
+Но так как от logstash'а уже прилетели логи в elasticsearch, индекс создался из дефолтного шаблона с кол-вом реплик 1. Изменим кол-во реплик для индекса `nginx-2020.10.21`:
 ```
-[root@elk ~]# curl -XPUT "localhost:9200/nginx-2020.07.01/_settings" -H 'Content-Type: application/json' -d'
+[root@elk ~]# curl -XPUT "localhost:9200/nginx-2020.10.21/_settings" -H 'Content-Type: application/json' -d'
 {
   "template": "*",
   "settings": {
